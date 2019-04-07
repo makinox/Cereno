@@ -1,3 +1,25 @@
+.list-section {
+  display: grid;
+  grid-template-columns: minmax(auto, 1100px);
+  justify-content: center;
+}
+
+.list-header {
+  margin-left: 60px;
+}
+
+.list-card {
+  display: inline-block;
+}
+
+.list-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(auto, 1fr));
+  justify-content: center;
+  justify-items: center;
+  grid-gap: 0 30px;
+}
+
 .list-card-media img {
   border-top-left-radius: 50px;
   border-bottom-right-radius: 50px;
@@ -9,8 +31,13 @@
   margin: 10px 10px;
 }
 
+.list-card-action {
+  text-align: center;
+}
+
 .list-card-action button {
   display: inline-block;
+  cursor: pointer;
   border: none;
   color: #fff;
   background-color: #FB6143;
