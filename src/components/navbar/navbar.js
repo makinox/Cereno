@@ -9,12 +9,13 @@ export default () => (
     <nav>
       <div>
         <span><img src={Logo} alt="Logo de cereno" loading="lazy" /></span>
-      </div>
-      <div>
-        <span><img src={Cart} alt="Carrito de compra de cereno" loading="lazy" /></span>
+        <span>Cereno</span>
       </div>
       <div>
         <span><img src={Search} alt="Menu de busqueda de cereno" loading="lazy" /></span>
+      </div>
+      <div>
+        <span><img src={Cart} alt="Carrito de compra de cereno" loading="lazy" /></span>
       </div>
     </nav>
   </header>

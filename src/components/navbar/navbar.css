@@ -33,6 +33,18 @@ header nav div span img {
 	width: 25px;
 }
 
+header nav div:first-of-type {
+  display: inline-flex;
+  align-items: center;
+}
+
+header nav div:first-of-type span:last-of-type {
+  font-size: 25px;
+  font-weight: 700;
+  margin-left: 10px;
+  font-style: italic;
+}
+
 @media screen and (max-width: 479px) {
 	header nav {
 		grid-template-columns: repeat(4, auto);
