@@ -1,0 +1,45 @@
+header {
+	display: grid;
+	grid-template-columns: minmax(auto, 1100px);
+	justify-content: center;
+	background-color: #fff;
+}
+
+header nav {
+	display: grid;
+	grid-template-columns: minmax(auto, 8000px) repeat(2, auto);
+	padding: 10px 15px;
+	grid-gap: 10px 10px;
+	align-items: center;
+}
+
+header nav span {
+	display: inline;
+	color: rgba(0,0,0, .7);
+	transition: 0.3s ease;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+header nav span:hover {
+	color: #333333
+}
+
+header nav div:first-of-type span img {
+  width: 35px;
+}
+
+header nav div span img {
+	width: 25px;
+}
+
+@media screen and (max-width: 479px) {
+	header nav {
+		grid-template-columns: repeat(4, auto);
+		justify-content: space-around;
+		padding: 18px 15px;
+	}
+	header nav div:first-of-type {
+		display: none;
+	}
+}
