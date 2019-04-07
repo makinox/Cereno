@@ -1,0 +1,23 @@
+.list-card-media img {
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  box-shadow: 3px 3px 28px 0 rgba(0, 0, 0, .3);
+}
+
+.list-card-description h3 {
+  display: inline-block;
+  margin: 10px 10px;
+}
+
+.list-card-action button {
+  display: inline-block;
+  border: none;
+  color: #fff;
+  background-color: #FB6143;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  font-size: 20px;
+  border-radius: 50%;
+  box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, .3);
+}
