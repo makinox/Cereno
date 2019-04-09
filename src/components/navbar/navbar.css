@@ -47,7 +47,7 @@ header nav div:first-of-type span:last-of-type {
 
 @media screen and (max-width: 479px) {
 	header nav {
-		grid-template-columns: repeat(4, auto);
+		grid-template-columns: repeat(2, auto);
 		justify-content: space-around;
 		padding: 18px 15px;
 	}
