@@ -1,7 +1,7 @@
 // Gatsby supports TypeScript natively!
 import React from "react"
 import { PageProps, Link } from "gatsby"
-import SEO from "../components/seo"
+import { SEO } from "../components/"
 
 const SecondPage = (props: PageProps) => (
   <>
