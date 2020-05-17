@@ -1,15 +1,16 @@
 import React from "react"
+import { Nav, Icon, Title, InputContainer, Input } from "./styles"
 
 export default () => (
-  <nav>
+  <Nav>
     <div>
-      <span></span>
+      <Icon />
     </div>
     <div>
-      <span>Cereno</span>
+      <Title>Cereno</Title>
     </div>
-    <div>
-      <input type="text" />
-    </div>
-  </nav>
+    <InputContainer>
+      <Input placeholder="Search" type="text" />
+    </InputContainer>
+  </Nav>
 )
