@@ -1,4 +1,5 @@
 export { default as SEO } from "./seo/seo"
 export { default as Navbar } from "./navbar/navbar"
 export { default as Banner } from "./banner/banner"
-export { default as Restaurant } from "./restaurant/restaurant"
+export { default as Restaurant } from "./restaurant/restaurantLayout"
+export { default as LayoutContainer } from "./layoutContainer/layoutContainer"

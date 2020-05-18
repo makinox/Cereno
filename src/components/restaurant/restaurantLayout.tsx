@@ -1,7 +1,7 @@
 import React from "react"
 import { Section, RestaurantTitle } from "./styles"
 
-export default () => (
+export default ({ options }: { options: Array<object | any> }) => (
   <>
     <Section>
       <div>
@@ -9,11 +9,11 @@ export default () => (
       </div>
       <div>
         <select name="select">
-          <option value="value1" defaultValue="true">
-            Delivery: now
-          </option>
-          <option value="value2">Delivery: morning</option>
-          <option value="value3">Delivery: night</option>
+          {options.map((el, idx) => (
+            <option key={idx} value={el.value} defaultValue={el.state}>
+              {el.value}
+            </option>
+          ))}
         </select>
       </div>
     </Section>
