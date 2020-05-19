@@ -1,7 +1,7 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 
 interface ItemProps {
-  readonly activate: boolean
+  readonly activate: boolean;
 }
 
 export const List = styled.ul`
@@ -9,7 +9,7 @@ export const List = styled.ul`
   flex-direction: row;
   padding: 0;
   margin: 10px 30px;
-`
+`;
 
 export const Item = styled.article<ItemProps>`
   display: flex;
@@ -19,7 +19,7 @@ export const Item = styled.article<ItemProps>`
   margin: 0 10px;
   border-radius: 40px;
   flex-direction: column;
-  background-color: ${(p: any) => (p.activate ? "#fbd661" : "#fff")};
+  background-color: ${(p: any) => (p.activate ? '#fbd661' : '#fff')};
   box-shadow: 20px 10px 30px 0 rgba(0, 0, 0, 0.1);
 
   &:first-of-type {
@@ -29,7 +29,7 @@ export const Item = styled.article<ItemProps>`
   /* &:active {
     background-color: #fbd661;
   } */
-`
+`;
 
 export const ItemIcon = styled.div`
   display: flex;
@@ -41,9 +41,9 @@ export const ItemIcon = styled.div`
   justify-content: center;
   background-color: #fff;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-`
+`;
 
-export const ItemTitle = styled.div`
-  display: flex;
-  padding: 10px 0;
-`
+export const ItemTitle = styled.h2`
+  font-size: 16px;
+  font-weight: 400;
+`;
