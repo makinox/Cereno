@@ -1,14 +1,14 @@
-import React from "react"
-import { Section, RestaurantTitle } from "./styles"
+import React from 'react';
+import { Section, RestaurantTitle } from './styles';
 
-export default ({ options }: { options: Array<object | any> }) => (
+export default ({ options, handleSelect }: { options: Array<object | any>; handleSelect: any }) => (
   <>
     <Section>
       <div>
         <RestaurantTitle>Restaurant 🍔</RestaurantTitle>
       </div>
       <div>
-        <select name="select">
+        <select name="select" onChange={handleSelect}>
           {options.map((el, idx) => (
             <option key={idx} value={el.value} defaultValue={el.state}>
               {el.value}
@@ -18,4 +18,4 @@ export default ({ options }: { options: Array<object | any> }) => (
       </div>
     </Section>
   </>
-)
+);
