@@ -15,13 +15,12 @@ export default () => {
     { icon: <FaHamburger />, title: 'Burgers', active: false },
     { icon: <FaEgg />, title: 'Vegie', active: false },
     { icon: <FaHotdog />, title: 'Hotdog', active: false },
-    // { icon: <FaHotdog />, title: "Hotdog", active: false },
   ]);
 
   const [cards, useCards] = useState([
-    { img: 'https://i.picsum.photos/id/429/300/200.jpg', title: 'Fresas', stat: 4.7, tags: ['Dulce', 'Fruta', 'Fresa'], time: [15, 25] },
-    { img: 'https://i.picsum.photos/id/429/300/200.jpg', title: 'Fresas', stat: 4.7, tags: ['Dulce', 'Fruta', 'Fresa'], time: [15, 25] },
-    { img: 'https://i.picsum.photos/id/429/300/200.jpg', title: 'Fresas', stat: 4.7, tags: ['Dulce', 'Fruta', 'Fresa'], time: [15, 25] },
+    { img: 'https://i.picsum.photos/id/429/250/150.jpg', title: 'Fresas', ratings: 4.7, tags: ['Dulce', 'Fruta'], time: [15, 25], price: '$$$' },
+    { img: 'https://i.picsum.photos/id/429/250/150.jpg', title: 'Fresas', ratings: 4.7, tags: ['Dulce', 'Fruta'], time: [15, 25], price: '$$' },
+    { img: 'https://i.picsum.photos/id/429/250/150.jpg', title: 'Fresas', ratings: 4.7, tags: ['Dulce', 'Fruta'], time: [15, 25], price: '$' },
   ]);
 
   const handleItem = (itemId: number = 0) => {

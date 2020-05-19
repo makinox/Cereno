@@ -25,10 +25,6 @@ export const Item = styled.article<ItemProps>`
   &:first-of-type {
     margin-left: 0;
   }
-
-  /* &:active {
-    background-color: #fbd661;
-  } */
 `;
 
 export const ItemIcon = styled.div`
