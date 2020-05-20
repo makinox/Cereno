@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { fadeIn } from '../animations/animations';
+import { fadeIn } from '../../utils/animations/animations';
 
 export const CardList = styled.ul`
   display: flex;
