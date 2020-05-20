@@ -1,16 +1,21 @@
-import React from "react"
-import { SEO, Navbar, Banner, LayoutContainer } from "../components/"
-import { Restaurant } from "../containers"
+import React from 'react';
+import { SEO, Navbar, Banner, LayoutContainer, Cart } from '../components/';
+import { Restaurant, Viewport } from '../containers';
 
 const IndexPage = () => (
   <>
     <SEO title="Home" />
-    <Navbar />
-    <LayoutContainer>
-      <Banner />
-      <Restaurant />
-    </LayoutContainer>
+    <Viewport>
+      <section>
+        <Navbar />
+        <LayoutContainer>
+          <Banner />
+          <Restaurant />
+        </LayoutContainer>
+      </section>
+      <Cart />
+    </Viewport>
   </>
-)
+);
 
-export default IndexPage
+export default IndexPage;

@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import { IoIosMenu } from "react-icons/io"
+import styled from 'styled-components';
+import { IoIosMenu } from 'react-icons/io';
 
 export const Nav = styled.nav`
   display: grid;
@@ -7,24 +7,24 @@ export const Nav = styled.nav`
   justify-content: center;
   justify-items: center;
   align-items: center;
-  margin: 10px;
-`
+  padding: 10px;
+`;
 
 export const Icon = styled(IoIosMenu)`
   display: flex;
   cursor: pointer;
   font-size: 30px;
-`
+`;
 
 export const Title = styled.h1`
   font-size: 24px;
   margin: 0;
-`
+`;
 
 export const InputContainer = styled.div`
   display: flex;
   justify-self: flex-start;
-`
+`;
 
 export const Input = styled.input`
   width: 55vw;
@@ -38,4 +38,4 @@ export const Input = styled.input`
   &:focus {
     outline: none;
   }
-`
+`;

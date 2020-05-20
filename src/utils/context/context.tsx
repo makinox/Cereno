@@ -4,6 +4,7 @@ export const CartContext = createContext(undefined);
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
+  const [viewport, useViewport] = useState(false);
 
   const addToCart = element => {
     setCart([...cart, element]);
@@ -14,6 +15,8 @@ export const CartProvider = ({ children }) => {
       value={{
         cart,
         addToCart,
+        viewport,
+        useViewport,
       }}
     >
       {children}
