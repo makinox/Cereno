@@ -40,6 +40,10 @@ export default () => {
     console.log({ msg: 'select', value: target.value, option: target.selectedIndex });
   };
 
+  const handleCard = (itemKey: number) => {
+    console.log({ itemKey, card: cards[itemKey] });
+  };
+
   return (
     <>
       <Restaurant options={options} handleSelect={handleSelect} />
@@ -47,7 +51,7 @@ export default () => {
         <FoodItem items={item} handleItem={handleItem} />
       </section>
       <section>
-        <FoodCard cards={cards} />
+        <FoodCard cards={cards} handleCard={handleCard} />
       </section>
     </>
   );

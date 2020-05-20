@@ -2,10 +2,10 @@ import React from 'react';
 import { CardList, CardImage, Card, CardTitle, CardRating, CardBottom, CardTags, CardMedia, CardTime } from './styles';
 import { FaRegStar } from 'react-icons/fa';
 
-export default ({ cards }: { cards: Array<object | any> }) => (
+export default ({ cards, handleCard }: { cards: Array<object | any>; handleCard: any }) => (
   <CardList>
     {cards.map((el, idx) => (
-      <Card key={idx}>
+      <Card key={idx} onClick={() => handleCard(idx)}>
         <CardMedia>
           <CardImage src={el.img} alt={el.title} />
           <CardTime>
