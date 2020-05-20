@@ -22,11 +22,27 @@ export const Card = styled.article`
   }
 `;
 
+export const CardMedia = styled.div`
+  display: flex;
+  position: relative;
+`;
+
 export const CardImage = styled.img`
   object-fit: cover;
   height: 150px;
   width: 250px;
   border-radius: 20px;
+`;
+
+export const CardTime = styled.span`
+  position: absolute;
+  width: 40%;
+  padding: 10px 0 10px 5px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.8);
 `;
 
 export const CardTitle = styled.h3`

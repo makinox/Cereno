@@ -1,14 +1,17 @@
 import React from 'react';
-import { CardList, CardImage, Card, CardTitle, CardRating, CardBottom, CardTags } from './styles';
+import { CardList, CardImage, Card, CardTitle, CardRating, CardBottom, CardTags, CardMedia, CardTime } from './styles';
 import { FaRegStar } from 'react-icons/fa';
 
 export default ({ cards }: { cards: Array<object | any> }) => (
   <CardList>
     {cards.map((el, idx) => (
       <Card key={idx}>
-        <div>
+        <CardMedia>
           <CardImage src={el.img} alt={el.title} />
-        </div>
+          <CardTime>
+            {el.time[0]} - {el.time[1]} min
+          </CardTime>
+        </CardMedia>
         <div>
           <div>
             <CardTitle>{el.title}</CardTitle>
