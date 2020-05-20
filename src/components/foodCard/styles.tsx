@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { fadeIn } from '../animations/animations';
 
 export const CardList = styled.ul`
   display: flex;
@@ -8,7 +9,26 @@ export const CardList = styled.ul`
   justify-content: center;
 `;
 
+export const CardOverlay = styled.div`
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: rgba(251, 214, 97, 0.9);
+
+  &:active {
+    background-color: rgba(251, 214, 97, 0.95);
+  }
+`;
+
 export const Card = styled.article`
+  position: relative;
   cursor: pointer;
   border-radius: 20px;
   margin: 10px;
@@ -19,6 +39,11 @@ export const Card = styled.article`
 
   &:hover {
     background-color: #fff3cc;
+  }
+
+  &:hover ${CardOverlay} {
+    animation: 0.3s ${fadeIn};
+    opacity: 1;
   }
 `;
 
@@ -66,4 +91,11 @@ export const CardTags = styled.span`
   color: #a6a6a6;
   font-size: 15px;
   margin: 0 3px;
+`;
+
+export const CardOverlayText = styled.span`
+  text-align: center;
+  margin: 10px 0;
+  font-size: 20px;
+  color: #000;
 `;

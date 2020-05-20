@@ -18,9 +18,33 @@ export default () => {
   ]);
 
   const [cards, useCards] = useState([
-    { img: 'https://i.picsum.photos/id/429/250/150.jpg', title: 'Fresas', ratings: 4.7, tags: ['Dulce', 'Fruta'], time: [15, 25], price: '$$$' },
-    { img: 'https://i.picsum.photos/id/429/250/150.jpg', title: 'Fresas', ratings: 4.7, tags: ['Dulce', 'Fruta'], time: [15, 25], price: '$$' },
-    { img: 'https://i.picsum.photos/id/429/250/150.jpg', title: 'Fresas', ratings: 4.7, tags: ['Dulce', 'Fruta'], time: [15, 25], price: '$' },
+    {
+      img: 'https://i.picsum.photos/id/429/250/150.jpg',
+      title: 'Fresas',
+      cost: '50$',
+      ratings: 4.7,
+      tags: ['Dulce', 'Fruta'],
+      time: [15, 25],
+      price: '$$$',
+    },
+    {
+      img: 'https://i.picsum.photos/id/429/250/150.jpg',
+      title: 'Fresas',
+      cost: '50$',
+      ratings: 4.7,
+      tags: ['Dulce', 'Fruta'],
+      time: [15, 25],
+      price: '$$',
+    },
+    {
+      img: 'https://i.picsum.photos/id/429/250/150.jpg',
+      title: 'Fresas',
+      cost: '50$',
+      ratings: 4.7,
+      tags: ['Dulce', 'Fruta'],
+      time: [15, 25],
+      price: '$',
+    },
   ]);
 
   const handleItem = (itemId: number = 0) => {

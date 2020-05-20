@@ -1,11 +1,11 @@
 import React from 'react';
-import { CardList, CardImage, Card, CardTitle, CardRating, CardBottom, CardTags, CardMedia, CardTime } from './styles';
+import { CardList, CardImage, Card, CardTitle, CardRating, CardBottom, CardTags, CardMedia, CardTime, CardOverlay, CardOverlayText } from './styles';
 import { FaRegStar } from 'react-icons/fa';
 
 export default ({ cards, handleCard }: { cards: Array<object | any>; handleCard: any }) => (
   <CardList>
     {cards.map((el, idx) => (
-      <Card key={idx} onClick={() => handleCard(idx)}>
+      <Card key={idx}>
         <CardMedia>
           <CardImage src={el.img} alt={el.title} />
           <CardTime>
@@ -25,6 +25,10 @@ export default ({ cards, handleCard }: { cards: Array<object | any>; handleCard:
             <CardTags>{el.price}</CardTags>
           </CardBottom>
         </div>
+        <CardOverlay onClick={() => handleCard(idx)}>
+          <CardOverlayText>Toca para agregar al carrito</CardOverlayText>
+          <CardOverlayText>{el.cost}</CardOverlayText>
+        </CardOverlay>
       </Card>
     ))}
   </CardList>
