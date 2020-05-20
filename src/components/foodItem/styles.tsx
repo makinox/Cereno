@@ -25,6 +25,10 @@ export const Item = styled.article<ItemProps>`
   &:first-of-type {
     margin-left: 0;
   }
+
+  &:hover {
+    background-color: #fff0c4;
+  }
 `;
 
 export const ItemIcon = styled.div`
