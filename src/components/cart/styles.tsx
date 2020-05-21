@@ -55,3 +55,31 @@ export const CartTimerIcon = styled(FaRegClock)`
   border-radius: 10px;
   background-color: #614c97;
 `;
+
+export const CartItemContainer = styled.div`
+  margin: 10px 0;
+`;
+
+export const CartItem = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px 0;
+`;
+
+export const CartItemImage = styled.img`
+  border-radius: 10px;
+  width: 80px;
+  height: 50px;
+`;
+
+export const CartItemText = styled.span`
+  font-size: 14px;
+  font-weight: 600;
+`;
+
+export const CartItemCost = styled.span`
+  font-size: 14px;
+  font-weight: 600;
+  color: #a6a6a6;
+`;

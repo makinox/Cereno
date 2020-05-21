@@ -3,11 +3,11 @@ import { Restaurant, FoodItem, FoodCard } from '../../components';
 import { FaUtensils, FaPizzaSlice, FaEgg, FaHamburger, FaHotdog } from 'react-icons/fa';
 
 export default () => {
-  const [options, useOptions] = useState([
+  const options = [
     { state: true, value: 'Delivery: now' },
     { state: false, value: 'Delivery: morning' },
     { state: false, value: 'Delivery: night' },
-  ]);
+  ];
 
   const [item, useItem] = useState([
     { icon: <FaUtensils />, title: 'All', active: true },
