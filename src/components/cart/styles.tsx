@@ -4,7 +4,8 @@ import { FaRegClock } from 'react-icons/fa';
 export const CartContainer = styled.section`
   background-color: #fdfdfb;
   border-left: 1px solid #f1f1f1;
-  width: 100%;
+  min-width: 330px;
+  height: 99vh;
 `;
 
 export const CartWrapper = styled.div`

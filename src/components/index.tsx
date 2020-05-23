@@ -7,3 +7,4 @@ export { default as FoodCard } from './foodCard/foodCard';
 export { default as LayoutContainer } from './layoutContainer/layoutContainer';
 export { default as Cart } from './cart/cart';
 export { default as ViewportContainer } from './viewportContainer/viewportContainer';
+export { default as LeftContainer } from './leftContainer/leftContainer';

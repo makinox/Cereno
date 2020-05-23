@@ -1,18 +1,18 @@
 import React from 'react';
-import { SEO, Navbar, Banner, LayoutContainer, Cart } from '../components/';
+import { SEO, Navbar, Banner, LayoutContainer, Cart, LeftContainer } from '../components/';
 import { Restaurant, Viewport } from '../containers';
 
 const IndexPage = () => (
   <>
     <SEO title="Home" />
     <Viewport>
-      <section>
+      <LeftContainer>
         <Navbar />
         <LayoutContainer>
           <Banner />
           <Restaurant />
         </LayoutContainer>
-      </section>
+      </LeftContainer>
       <Cart />
     </Viewport>
   </>
