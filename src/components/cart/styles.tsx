@@ -6,6 +6,7 @@ export const CartContainer = styled.section`
   border-left: 1px solid #f1f1f1;
   min-width: 330px;
   height: 99vh;
+  overflow-y: auto;
 `;
 
 export const CartWrapper = styled.div`
@@ -59,6 +60,8 @@ export const CartTimerIcon = styled(FaRegClock)`
 
 export const CartItemContainer = styled.div`
   margin: 10px 0;
+  height: 300px;
+  overflow-y: auto;
 `;
 
 export const CartItem = styled.div`

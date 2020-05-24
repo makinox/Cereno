@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Restaurant, FoodItem, FoodCard } from '../../components';
 import { FaUtensils, FaPizzaSlice, FaEgg, FaHamburger, FaHotdog } from 'react-icons/fa';
+import { CartContext } from '../../utils/context/context';
 
 export default () => {
+  const { addToCart } = useContext(CartContext);
+
   const options = [
     { state: true, value: 'Delivery: now' },
     { state: false, value: 'Delivery: morning' },
@@ -66,6 +69,7 @@ export default () => {
 
   const handleCard = (itemKey: number) => {
     console.log({ itemKey, card: cards[itemKey] });
+    addToCart(cards[itemKey]);
   };
 
   return (
