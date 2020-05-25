@@ -24,11 +24,12 @@ export const Title = styled.h1`
 export const InputContainer = styled.div`
   display: flex;
   justify-self: flex-start;
+  width: 100%;
 `;
 
 export const Input = styled.input`
-  width: 55vw;
   border: none;
+  width: 100%;
   margin: 0 2vw;
   padding: 10px;
   border-radius: 10px;

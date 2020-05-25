@@ -20,6 +20,7 @@ export default () => {
     { icon: <FaHotdog />, title: 'Hotdog', active: false },
   ]);
 
+  //Unused usecard
   const [cards, useCards] = useState([
     {
       img: 'https://i.picsum.photos/id/429/250/150.jpg',

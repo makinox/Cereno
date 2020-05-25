@@ -28,7 +28,7 @@ export default () => {
   return (
     <CartContainer>
       <CartWrapper>
-        {console.log(cart)}
+        {/* {console.log(cart)} */}
         <CartTitle>My order 😎</CartTitle>
         <CartTimer>
           <CartTimerFlex>
