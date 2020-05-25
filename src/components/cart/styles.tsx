@@ -87,3 +87,17 @@ export const CartItemCost = styled.span`
   font-weight: 600;
   color: #a6a6a6;
 `;
+
+export const CartCheckout = styled.div`
+  display: flex;
+  justify-content: space-between;
+
+  &:first-of-type {
+    margin-top: 10px;
+    border-bottom: 1px solid #000;
+  }
+
+  &:last-of-type {
+    margin-bottom: 10px;
+  }
+`;

@@ -14,6 +14,7 @@ import {
   CartItemImage,
   CartItemText,
   CartItemCost,
+  CartCheckout,
 } from './styles';
 
 export default () => {
@@ -45,6 +46,25 @@ export default () => {
             </CartItem>
           ))}
         </CartItemContainer>
+        <CartCheckout>
+          <span>Total</span>
+          <span>$25.0</span>
+        </CartCheckout>
+        <CartCheckout>
+          <div>
+            <span>Persons</span>
+            <select>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+          <div>
+            <span>Checkout</span>
+            <span>-</span>
+          </div>
+        </CartCheckout>
       </CartWrapper>
     </CartContainer>
   );
