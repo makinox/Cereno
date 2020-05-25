@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { FaArrowRight } from 'react-icons/fa';
 import { CartContext } from '../../utils/context/context';
 import {
   CartContainer,
@@ -15,6 +16,11 @@ import {
   CartItemText,
   CartItemCost,
   CartCheckout,
+  CartCheckoutTotal,
+  CartCheckoutTotalMoney,
+  CartCheckoutCheckoutSelect,
+  CartCheckoutCheckoutButton,
+  CartCheckoutCheckoutButtonSpan,
 } from './styles';
 
 export default () => {
@@ -47,11 +53,11 @@ export default () => {
           ))}
         </CartItemContainer>
         <CartCheckout>
-          <span>Total</span>
-          <span>$25.0</span>
+          <CartCheckoutTotal>Total</CartCheckoutTotal>
+          <CartCheckoutTotalMoney>$25.0</CartCheckoutTotalMoney>
         </CartCheckout>
         <CartCheckout>
-          <div>
+          <CartCheckoutCheckoutSelect>
             <span>Persons</span>
             <select>
               <option value="1">1</option>
@@ -59,11 +65,11 @@ export default () => {
               <option value="3">3</option>
               <option value="4">4</option>
             </select>
-          </div>
-          <div>
-            <span>Checkout</span>
-            <span>-</span>
-          </div>
+          </CartCheckoutCheckoutSelect>
+          <CartCheckoutCheckoutButton>
+            <CartCheckoutCheckoutButtonSpan>Checkout</CartCheckoutCheckoutButtonSpan>
+            <FaArrowRight />
+          </CartCheckoutCheckoutButton>
         </CartCheckout>
       </CartWrapper>
     </CartContainer>

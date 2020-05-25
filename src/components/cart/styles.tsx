@@ -60,7 +60,7 @@ export const CartTimerIcon = styled(FaRegClock)`
 
 export const CartItemContainer = styled.div`
   margin: 10px 0;
-  height: 300px;
+  height: 32vh;
   overflow-y: auto;
 `;
 
@@ -91,13 +91,37 @@ export const CartItemCost = styled.span`
 export const CartCheckout = styled.div`
   display: flex;
   justify-content: space-between;
-
-  &:first-of-type {
-    margin-top: 10px;
-    border-bottom: 1px solid #000;
-  }
+  margin: 20px 0;
 
   &:last-of-type {
+    border-top: 1px solid rgb(166, 166, 166);
     margin-bottom: 10px;
+    padding-top: 20px;
   }
+`;
+
+export const CartCheckoutTotal = styled.span`
+  font-size: 16px;
+  font-weight: 600;
+`;
+
+export const CartCheckoutTotalMoney = styled.span`
+  font-size: 22px;
+  font-weight: 600;
+`;
+
+export const CartCheckoutCheckoutSelect = styled.span`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const CartCheckoutCheckoutButton = styled.span`
+  cursor: pointer;
+  background-color: rgb(251, 214, 97);
+  padding: 30px 20px;
+  border-radius: 20px;
+`;
+
+export const CartCheckoutCheckoutButtonSpan = styled.span`
+  padding-right: 10px;
 `;
