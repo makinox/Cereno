@@ -7,7 +7,7 @@ export default () => {
   const { viewport, cart } = useContext(CartContext);
   return (
     <ViewportContainer>
-      {console.log({ viewport, cart: cart.length })}
+      {/* {console.log({ viewport, cart: cart.length })} */}
       <LeftContainer>
         <LayoutContainer>
           <Navbar />

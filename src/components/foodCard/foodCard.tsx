@@ -2,12 +2,12 @@ import React from 'react';
 import { CardList, CardImage, Card, CardTitle, CardRating, CardBottom, CardTags, CardMedia, CardTime, CardOverlay, CardOverlayText } from './styles';
 import { FaRegStar } from 'react-icons/fa';
 
-export default ({ cards, handleCard }: { cards: Array<object | any>; handleCard: any }) => (
+export default ({ cards, handleCard, images }: { cards: Array<object | any>; handleCard: any; images: Array<object | any> }) => (
   <CardList>
     {cards.map((el, idx) => (
       <Card key={idx}>
         <CardMedia>
-          <CardImage src={el.img} alt={el.title} />
+          <CardImage fixed={images[el.img].childImageSharp.fixed} alt={el.title} />
           <CardTime>
             {el.time[0]} - {el.time[1]} min
           </CardTime>

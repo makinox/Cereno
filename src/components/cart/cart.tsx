@@ -28,7 +28,7 @@ export default () => {
   return (
     <CartContainer>
       <CartWrapper>
-        {/* {console.log(cart)} */}
+        {console.log(cart)}
         <CartTitle>My order 😎</CartTitle>
         <CartTimer>
           <CartTimerFlex>
@@ -44,7 +44,7 @@ export default () => {
         <CartItemContainer>
           {cart.map((el, idx) => (
             <CartItem key={idx}>
-              <CartItemImage src={el.img} alt={el.title} />
+              <CartItemImage src={el.recursive} alt={el.title} />
               <CartItemText>1</CartItemText>
               <CartItemText>x</CartItemText>
               <CartItemText>{el.title}</CartItemText>

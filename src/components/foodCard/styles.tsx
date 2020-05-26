@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { fadeIn } from '../../utils/animations/animations';
+import Image from 'gatsby-image';
 
 export const CardList = styled.ul`
   display: flex;
@@ -52,16 +53,17 @@ export const CardMedia = styled.div`
   position: relative;
 `;
 
-export const CardImage = styled.img`
+export const CardImage = styled(Image)`
   object-fit: cover;
-  height: 150px;
-  width: 250px;
+  height: 120px;
+  width: 200px;
   border-radius: 20px;
 `;
 
 export const CardTime = styled.span`
   position: absolute;
-  width: 40%;
+  width: 50%;
+  font-weight: 600;
   padding: 10px 0 10px 5px;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
