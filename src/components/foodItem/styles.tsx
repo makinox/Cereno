@@ -7,8 +7,10 @@ interface ItemProps {
 export const List = styled.ul`
   display: flex;
   flex-direction: row;
-  padding: 0;
-  margin: 10px 30px;
+  padding: 35px 0;
+  margin: 0 30px;
+  overflow-x: auto;
+  max-width: 85vw;
 `;
 
 export const Item = styled.article<ItemProps>`

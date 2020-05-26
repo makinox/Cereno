@@ -6,7 +6,7 @@ export const CardList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   padding: 0;
-  margin: 90px 30px;
+  margin: 30px 30px;
   justify-content: center;
 `;
 

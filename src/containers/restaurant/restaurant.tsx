@@ -78,6 +78,13 @@ export default () => {
     { icon: <FaHamburger />, title: 'Burgers', active: false },
     { icon: <FaEgg />, title: 'Vegie', active: false },
     { icon: <FaHotdog />, title: 'Hotdog', active: false },
+    // { icon: <FaHotdog />, title: 'Hotdog', active: false },
+    // { icon: <FaHotdog />, title: 'Hotdog', active: false },
+    // { icon: <FaHotdog />, title: 'Hotdog', active: false },
+    // { icon: <FaHotdog />, title: 'Hotdog', active: false },
+    // { icon: <FaHotdog />, title: 'Hotdog', active: false },
+    // { icon: <FaHotdog />, title: 'Hotdog', active: false },
+    // { icon: <FaHotdog />, title: 'Hotdog', active: false },
   ]);
 
   const cards = [
