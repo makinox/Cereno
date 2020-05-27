@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import { ViewportContainer, LeftContainer, LayoutContainer, Navbar, Banner, Cart } from '../../components/';
+import { ViewportContainer, LeftContainer, LayoutContainer, Navbar, Cart } from '../../components/';
 import { CartContext } from '../../utils/context/context';
-import { Restaurant } from '..';
+import { Restaurant, Banner } from '..';
 
 export default () => {
   const { viewport, cart } = useContext(CartContext);

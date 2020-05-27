@@ -1,11 +1,8 @@
-import React from "react"
-import { Image, BannerContainer } from "./styles"
+import React from 'react';
+import { Image, BannerContainer } from './styles';
 
-export default () => (
-  <BannerContainer>
-    <Image
-      src="https://i.picsum.photos/id/1080/800/220.jpg"
-      alt="Banner photos"
-    />
+export default ({ imageFluid, onClick }: { imageFluid: any; onClick: any }) => (
+  <BannerContainer onClick={onClick}>
+    <Image fluid={imageFluid} alt="Banner photos" />
   </BannerContainer>
-)
+);
