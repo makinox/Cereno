@@ -21,14 +21,15 @@ import {
   CartCheckoutCheckoutSelect,
   CartCheckoutCheckoutButton,
   CartCheckoutCheckoutButtonSpan,
+  CartCheckoutCheckoutSelectCancel,
 } from './styles';
 
-export default () => {
+export default ({ useActive }) => {
   const { cart } = useContext(CartContext);
   return (
     <CartContainer>
       <CartWrapper>
-        {console.log(cart)}
+        {/* {console.log(cart)} */}
         <CartTitle>My order 😎</CartTitle>
         <CartTimer>
           <CartTimerFlex>
@@ -57,15 +58,13 @@ export default () => {
           <CartCheckoutTotalMoney>$25.0</CartCheckoutTotalMoney>
         </CartCheckout>
         <CartCheckout>
-          <CartCheckoutCheckoutSelect>
-            <span>Persons</span>
-            <select>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-            </select>
-          </CartCheckoutCheckoutSelect>
+          {useActive ? (
+            <CartCheckoutCheckoutSelect onClick={() => useActive(false)}>
+              <CartCheckoutCheckoutSelectCancel />
+            </CartCheckoutCheckoutSelect>
+          ) : (
+            <div> </div>
+          )}
           <CartCheckoutCheckoutButton>
             <CartCheckoutCheckoutButtonSpan>Checkout</CartCheckoutCheckoutButtonSpan>
             <FaArrowRight />

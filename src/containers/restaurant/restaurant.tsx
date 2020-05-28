@@ -190,7 +190,7 @@ export default () => {
         return el;
       }
     });
-    console.log(renderCards);
+    // console.log(renderCards);
     useCards(renderCards);
   };
 

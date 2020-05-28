@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { FaRegClock } from 'react-icons/fa';
+import { FaRegClock, FaCompressArrowsAlt } from 'react-icons/fa';
 
 export const CartContainer = styled.section`
   background-color: #fdfdfb;
@@ -92,9 +92,11 @@ export const CartItemCost = styled.span`
 export const CartCheckout = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 20px 0;
 
   &:last-of-type {
+    align-items: flex-start;
     border-top: 1px solid rgb(166, 166, 166);
     margin-bottom: 10px;
     padding-top: 20px;
@@ -112,8 +114,21 @@ export const CartCheckoutTotalMoney = styled.span`
 `;
 
 export const CartCheckoutCheckoutSelect = styled.span`
+  cursor: pointer;
   display: flex;
   flex-direction: column;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 5px 0 25px 0;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+`;
+
+export const CartCheckoutCheckoutSelectCancel = styled(FaCompressArrowsAlt)`
+  font-size: 20px;
 `;
 
 export const CartCheckoutCheckoutButton = styled.span`

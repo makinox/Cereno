@@ -1,18 +1,16 @@
-import React, { useContext, useEffect } from 'react';
-import { ViewportContainer, LeftContainer, LayoutContainer, Navbar, Cart, ModalContainer } from '../../components/';
+import React, { useContext, useEffect, useState } from 'react';
+import { ViewportContainer, LeftContainer, LayoutContainer, Navbar, Cart, ModalContainer, FloatIcon } from '../../components/';
 import { CartContext } from '../../utils/context/context';
 import { Restaurant, Banner } from '..';
 
 export default () => {
   const { viewport, cart } = useContext(CartContext);
-  if (typeof window !== `undefined`) {
-    const width = document.getElementsByTagName('body')[0].clientWidth;
-  }
+  const [active, useActive] = useState(false);
 
   return (
     <>
       <ViewportContainer>
-        {console.log({ cart: cart.length, width: viewport })}
+        {/* {console.log({ cart: cart.length, width: viewport })} */}
         <LeftContainer>
           <LayoutContainer>
             <Navbar />
@@ -20,11 +18,16 @@ export default () => {
             <Restaurant />
           </LayoutContainer>
         </LeftContainer>
-        {cart.length && viewport > 900 ? <Cart /> : null}
+        {cart.length && viewport > 900 ? <Cart useActive={null} /> : null}
       </ViewportContainer>
-      {cart.length && viewport < 900 ? (
-        <ModalContainer>
-          <Cart />
+      {active && cart.length && viewport < 900 ? (
+        <ModalContainer full={true}>
+          <Cart useActive={useActive} />
+        </ModalContainer>
+      ) : null}
+      {!active && cart.length && viewport < 900 ? (
+        <ModalContainer full={false}>
+          <FloatIcon action={useActive} />
         </ModalContainer>
       ) : null}
     </>
