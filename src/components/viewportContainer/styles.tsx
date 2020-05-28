@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ViewContainer = styled.style`
+export const ViewContainer = styled.section`
   display: flex;
   justify-content: center;
 `;

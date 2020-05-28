@@ -1,10 +1,10 @@
 import React, { createContext, useState } from 'react';
 
-export const CartContext = createContext({ cart: [], addToCart: null, viewport: null, useViewport: null });
+export const CartContext = createContext({ cart: [], addToCart: null, viewport: 0 });
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-  const [viewport, useViewport] = useState(false);
+  const viewport = document.getElementsByTagName('body')[0].clientWidth;
 
   const addToCart = element => {
     setCart([...cart, element]);
@@ -16,7 +16,6 @@ export const CartProvider = ({ children }) => {
         cart,
         addToCart,
         viewport,
-        useViewport,
       }}
     >
       {children}

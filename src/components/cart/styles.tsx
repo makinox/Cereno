@@ -5,7 +5,7 @@ export const CartContainer = styled.section`
   background-color: #fdfdfb;
   border-left: 1px solid #f1f1f1;
   min-width: 330px;
-  height: 99vh;
+  height: 100vh;
   overflow-y: auto;
 `;
 
@@ -78,6 +78,7 @@ export const CartItemImage = styled.img`
 `;
 
 export const CartItemText = styled.span`
+  text-align: center;
   font-size: 14px;
   font-weight: 600;
 `;
