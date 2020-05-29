@@ -1,8 +1,8 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import { CartContext } from '../../utils/context/context';
 import { Restaurant, FoodItem, FoodCard } from '../../components';
 import { FaUtensils, FaPizzaSlice, FaEgg, FaHamburger, FaHotdog } from 'react-icons/fa';
-import { CartContext } from '../../utils/context/context';
-import { useStaticQuery, graphql } from 'gatsby';
 
 export default () => {
   const imageData = useStaticQuery(graphql`
@@ -65,11 +65,13 @@ export default () => {
       }
     }
   `);
-  const { addToCart } = useContext(CartContext);
+
+  const { addToCart, filter } = useContext(CartContext);
+
   const options = [
-    { state: true, value: 'Delivery: now' },
-    { state: false, value: 'Delivery: morning' },
-    { state: false, value: 'Delivery: night' },
+    { state: true, value: 'Entrega: Ahora' },
+    { state: false, value: 'Entrega: En la mañana' },
+    { state: false, value: 'Entrega: En la noche' },
   ];
 
   const [item, useItem] = useState([
@@ -205,6 +207,11 @@ export default () => {
     selectedCart.recursive = imageData[cards[itemKey].img].childImageSharp.fixed.src;
     addToCart(selectedCart);
   };
+
+  useEffect(() => {
+    const resCards = cards.filter(el => el.title.toLowerCase().includes(filter));
+    useCards(resCards);
+  }, [filter]);
 
   return (
     <>

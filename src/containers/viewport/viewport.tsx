@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { ViewportContainer, LeftContainer, LayoutContainer, Navbar, Cart, ModalContainer, FloatIcon } from '../../components/';
 import { CartContext } from '../../utils/context/context';
 import { Restaurant, Banner } from '..';

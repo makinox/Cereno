@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Cereno`,
     description: `App de menu de restaurantes.`,
-    author: `@makinox`,
+    author: `Jesus bossa`,
   },
   plugins: [
     {

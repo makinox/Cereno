@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext, useState } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 import { CartContext } from '../../utils/context/context';
 import {
@@ -25,23 +25,40 @@ import {
 } from './styles';
 
 export default ({ useActive }) => {
-  const { cart } = useContext(CartContext);
+  const { cart, deleteCart } = useContext(CartContext);
+  const [direction, useDirection] = useState('Calle 74, Los andines');
+  const [time, useTime] = useState('30');
   const total = () => cart.reduce((acc, current) => acc + current.cost, 0);
+
+  const handleDirections = () => {
+    const dir = window.prompt('Donde se va a entregar?');
+    if (dir) useDirection(dir);
+  };
+
+  const handleTime = () => {
+    const time = window.prompt('Dentro de cuanto tiempo?');
+    if (time) useTime(time);
+  };
+
+  const emptyOrder = () => {
+    deleteCart();
+    window.alert('Muchas gracias por comprar aqui!');
+  };
 
   return (
     <CartContainer>
       <CartWrapper>
         {/* {console.log(cart)} */}
-        <CartTitle>My order 😎</CartTitle>
+        <CartTitle>My orden 😎</CartTitle>
         <CartTimer>
           <CartTimerFlex>
-            <CartTimerText>Calle 74, Los andines</CartTimerText>
-            <CartTimerButton>Edit</CartTimerButton>
+            <CartTimerText>{direction}</CartTimerText>
+            <CartTimerButton onClick={handleDirections}>Edit</CartTimerButton>
           </CartTimerFlex>
           <CartTimerFlex>
             <CartTimerIcon />
-            <CartTimerText>35 min</CartTimerText>
-            <CartTimerButton>Choose time</CartTimerButton>
+            <CartTimerText>{time} min</CartTimerText>
+            <CartTimerButton onClick={handleTime}>Choose time</CartTimerButton>
           </CartTimerFlex>
         </CartTimer>
         <CartItemContainer>
@@ -65,7 +82,7 @@ export default ({ useActive }) => {
           ) : (
             <div> </div>
           )}
-          <CartCheckoutCheckoutButton>
+          <CartCheckoutCheckoutButton onClick={emptyOrder}>
             <CartCheckoutCheckoutButtonSpan>Checkout</CartCheckoutCheckoutButtonSpan>
             <FaArrowRight />
           </CartCheckoutCheckoutButton>

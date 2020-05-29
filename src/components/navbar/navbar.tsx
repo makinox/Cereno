@@ -1,6 +1,7 @@
-import React from 'react';
-import { Nav, Logo, InputContainer, Input } from './styles';
+import React, { useContext } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import { CartContext } from '../../utils/context/context';
+import { Nav, Logo, InputContainer, Input } from './styles';
 
 export default () => {
   const data = useStaticQuery(graphql`
@@ -11,14 +12,16 @@ export default () => {
     }
   `);
 
+  const { useFilter } = useContext(CartContext);
+  const handleInput = e => useFilter(e.target.value);
+
   return (
     <Nav>
-      {/* {console.log(data.placeholderImage.publicURL)} */}
       <div>
         <Logo src={data.placeholderImage.publicURL} alt="Cereno logo" />
       </div>
       <InputContainer>
-        <Input placeholder="Search" type="text" />
+        <Input placeholder="Buscar" type="text" onChange={handleInput} />
       </InputContainer>
     </Nav>
   );
