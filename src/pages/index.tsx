@@ -4,7 +4,7 @@ import { Viewport } from '../containers';
 
 const IndexPage = () => (
   <>
-    <SEO title="Home" />
+    <SEO title="Cereno" />
     <Viewport />
   </>
 );

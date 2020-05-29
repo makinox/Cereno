@@ -1,16 +1,25 @@
 import React from 'react';
-import { Nav, Icon, Title, InputContainer, Input } from './styles';
+import { Nav, Logo, InputContainer, Input } from './styles';
+import { useStaticQuery, graphql } from 'gatsby';
 
-export default () => (
-  <Nav>
-    {/* <div>
-      <Icon />
-    </div> */}
-    <div>
-      <Title>Cereno</Title>
-    </div>
-    <InputContainer>
-      <Input placeholder="Search" type="text" />
-    </InputContainer>
-  </Nav>
-);
+export default () => {
+  const data = useStaticQuery(graphql`
+    query {
+      placeholderImage: file(relativePath: { eq: "logo/Cereno.svg" }) {
+        publicURL
+      }
+    }
+  `);
+
+  return (
+    <Nav>
+      {/* {console.log(data.placeholderImage.publicURL)} */}
+      <div>
+        <Logo src={data.placeholderImage.publicURL} alt="Cereno logo" />
+      </div>
+      <InputContainer>
+        <Input placeholder="Search" type="text" />
+      </InputContainer>
+    </Nav>
+  );
+};

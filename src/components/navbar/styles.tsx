@@ -3,7 +3,7 @@ import { IoIosMenu } from 'react-icons/io';
 
 export const Nav = styled.nav`
   display: grid;
-  grid-template-columns: 0.1fr 0.9fr;
+  grid-template-columns: 1fr 9fr;
   justify-content: center;
   justify-items: center;
   align-items: center;
@@ -16,9 +16,9 @@ export const Icon = styled(IoIosMenu)`
   font-size: 30px;
 `;
 
-export const Title = styled.h1`
-  font-size: 24px;
-  margin: 0;
+export const Logo = styled.img`
+  cursor: pointer;
+  width: 110px;
 `;
 
 export const InputContainer = styled.div`
