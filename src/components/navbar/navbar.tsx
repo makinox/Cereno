@@ -1,11 +1,11 @@
-import React from "react"
-import { Nav, Icon, Title, InputContainer, Input } from "./styles"
+import React from 'react';
+import { Nav, Icon, Title, InputContainer, Input } from './styles';
 
 export default () => (
   <Nav>
-    <div>
+    {/* <div>
       <Icon />
-    </div>
+    </div> */}
     <div>
       <Title>Cereno</Title>
     </div>
@@ -13,4 +13,4 @@ export default () => (
       <Input placeholder="Search" type="text" />
     </InputContainer>
   </Nav>
-)
+);

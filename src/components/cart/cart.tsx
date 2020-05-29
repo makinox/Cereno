@@ -46,8 +46,8 @@ export default ({ useActive }) => {
           {cart.map((el, idx) => (
             <CartItem key={idx}>
               <CartItemImage src={el.recursive} alt={el.title} />
-              <CartItemText>1</CartItemText>
-              <CartItemText>x</CartItemText>
+              {/* <CartItemText>1</CartItemText>
+              <CartItemText>x</CartItemText> */}
               <CartItemText>{el.title}</CartItemText>
               <CartItemCost>{el.cost}</CartItemCost>
             </CartItem>

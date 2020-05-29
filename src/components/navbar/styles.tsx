@@ -3,7 +3,7 @@ import { IoIosMenu } from 'react-icons/io';
 
 export const Nav = styled.nav`
   display: grid;
-  grid-template-columns: 0.05fr 0.1fr 0.85fr;
+  grid-template-columns: 0.1fr 0.9fr;
   justify-content: center;
   justify-items: center;
   align-items: center;

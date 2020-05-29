@@ -9,56 +9,56 @@ export default () => {
     query {
       img1: file(relativePath: { eq: "food/1.jpg" }) {
         childImageSharp {
-          fixed(width: 200, height: 120) {
+          fixed(width: 150, height: 100) {
             ...GatsbyImageSharpFixed
           }
         }
       }
       img2: file(relativePath: { eq: "food/2.jpg" }) {
         childImageSharp {
-          fixed(width: 200, height: 120) {
+          fixed(width: 150, height: 100) {
             ...GatsbyImageSharpFixed
           }
         }
       }
       img3: file(relativePath: { eq: "food/3.jpg" }) {
         childImageSharp {
-          fixed(width: 200, height: 120) {
+          fixed(width: 150, height: 100) {
             ...GatsbyImageSharpFixed
           }
         }
       }
       img4: file(relativePath: { eq: "food/4.jpg" }) {
         childImageSharp {
-          fixed(width: 200, height: 120) {
+          fixed(width: 150, height: 100) {
             ...GatsbyImageSharpFixed
           }
         }
       }
       img5: file(relativePath: { eq: "food/5.jpg" }) {
         childImageSharp {
-          fixed(width: 200, height: 120) {
+          fixed(width: 150, height: 100) {
             ...GatsbyImageSharpFixed
           }
         }
       }
       img6: file(relativePath: { eq: "food/6.jpg" }) {
         childImageSharp {
-          fixed(width: 200, height: 120) {
+          fixed(width: 150, height: 100) {
             ...GatsbyImageSharpFixed
           }
         }
       }
       img7: file(relativePath: { eq: "food/7.jpg" }) {
         childImageSharp {
-          fixed(width: 200, height: 120) {
+          fixed(width: 150, height: 100) {
             ...GatsbyImageSharpFixed
           }
         }
       }
       img8: file(relativePath: { eq: "food/8.jpg" }) {
         childImageSharp {
-          fixed(width: 200, height: 120) {
+          fixed(width: 150, height: 100) {
             ...GatsbyImageSharpFixed
           }
         }

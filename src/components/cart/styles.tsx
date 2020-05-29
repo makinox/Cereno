@@ -7,6 +7,13 @@ export const CartContainer = styled.section`
   min-width: 330px;
   height: 100vh;
   overflow-y: auto;
+
+  @media (max-width: 823px) {
+    min-width: auto;
+    width: auto;
+    height: auto;
+    border: none;
+  }
 `;
 
 export const CartWrapper = styled.div`
@@ -16,6 +23,10 @@ export const CartWrapper = styled.div`
 export const CartTitle = styled.h4`
   margin: 0;
   font-size: 30px;
+
+  @media (max-width: 823px) {
+    margin: 36px;
+  }
 `;
 
 export const CartTimer = styled.div`

@@ -6,7 +6,7 @@ export const CardList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   padding: 0;
-  margin: 30px 30px;
+  /* margin: 30px 30px; */
   justify-content: center;
 `;
 
@@ -62,7 +62,7 @@ export const CardImage = styled(Image)`
 
 export const CardTime = styled.span`
   position: absolute;
-  width: 50%;
+  width: 60%;
   font-weight: 600;
   padding: 10px 0 10px 5px;
   border-top-right-radius: 20px;
@@ -74,6 +74,7 @@ export const CardTime = styled.span`
 
 export const CardTitle = styled.h3`
   margin: 12px 0 6px 0;
+  font-size: 16px;
 `;
 
 export const CardBottom = styled.div`
