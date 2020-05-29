@@ -84,7 +84,7 @@ export default () => {
     {
       img: 'img1',
       title: 'Pizza sencilla',
-      cost: '50$',
+      cost: 50,
       ratings: 4.7,
       tags: ['Dulce', 'Fruta'],
       time: [15, 25],
@@ -95,7 +95,7 @@ export default () => {
     {
       img: 'img2',
       title: 'Pizza grande',
-      cost: '50$',
+      cost: 50,
       ratings: 4.7,
       tags: ['Dulce', 'Fruta'],
       time: [15, 25],
@@ -106,7 +106,7 @@ export default () => {
     {
       img: 'img3',
       title: 'Hamburgesa sencilla',
-      cost: '50$',
+      cost: 50,
       ratings: 4.7,
       tags: ['Dulce', 'Fruta'],
       time: [15, 25],
@@ -117,7 +117,7 @@ export default () => {
     {
       img: 'img4',
       title: 'Hamburgesa grande',
-      cost: '50$',
+      cost: 50,
       ratings: 4.7,
       tags: ['Dulce', 'Fruta'],
       time: [15, 25],
@@ -128,7 +128,7 @@ export default () => {
     {
       img: 'img5',
       title: 'Ensalada sencilla',
-      cost: '50$',
+      cost: 50,
       ratings: 4.7,
       tags: ['Dulce', 'Fruta'],
       time: [15, 25],
@@ -139,7 +139,7 @@ export default () => {
     {
       img: 'img6',
       title: 'Ensalada griega',
-      cost: '50$',
+      cost: 50,
       ratings: 4.7,
       tags: ['Dulce', 'Fruta'],
       time: [15, 25],
@@ -150,7 +150,7 @@ export default () => {
     {
       img: 'img7',
       title: 'Perro sencillo',
-      cost: '50$',
+      cost: 50,
       ratings: 4.7,
       tags: ['Dulce', 'Fruta'],
       time: [15, 25],
@@ -161,7 +161,7 @@ export default () => {
     {
       img: 'img8',
       title: 'Perro suizo',
-      cost: '50$',
+      cost: 50,
       ratings: 4.7,
       tags: ['Dulce', 'Fruta'],
       time: [15, 25],

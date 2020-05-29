@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 import { CartContext } from '../../utils/context/context';
 import {
@@ -26,6 +26,8 @@ import {
 
 export default ({ useActive }) => {
   const { cart } = useContext(CartContext);
+  const total = () => cart.reduce((acc, current) => acc + current.cost, 0);
+
   return (
     <CartContainer>
       <CartWrapper>
@@ -46,16 +48,14 @@ export default ({ useActive }) => {
           {cart.map((el, idx) => (
             <CartItem key={idx}>
               <CartItemImage src={el.recursive} alt={el.title} />
-              {/* <CartItemText>1</CartItemText>
-              <CartItemText>x</CartItemText> */}
               <CartItemText>{el.title}</CartItemText>
-              <CartItemCost>{el.cost}</CartItemCost>
+              <CartItemCost>{el.cost}$</CartItemCost>
             </CartItem>
           ))}
         </CartItemContainer>
         <CartCheckout>
           <CartCheckoutTotal>Total</CartCheckoutTotal>
-          <CartCheckoutTotalMoney>$25.0</CartCheckoutTotalMoney>
+          <CartCheckoutTotalMoney>$ {total()}</CartCheckoutTotalMoney>
         </CartCheckout>
         <CartCheckout>
           {useActive ? (

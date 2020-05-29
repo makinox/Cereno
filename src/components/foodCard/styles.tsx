@@ -99,6 +99,6 @@ export const CardTags = styled.span`
 export const CardOverlayText = styled.span`
   text-align: center;
   margin: 10px 0;
-  font-size: 20px;
+  font-size: 17px;
   color: #000;
 `;

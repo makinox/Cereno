@@ -27,7 +27,7 @@ export default ({ cards, handleCard, images }: { cards: Array<object | any>; han
         </div>
         <CardOverlay onClick={() => handleCard(idx)}>
           <CardOverlayText>Toca para agregar al carrito</CardOverlayText>
-          <CardOverlayText>{el.cost}</CardOverlayText>
+          <CardOverlayText>{el.cost} $</CardOverlayText>
         </CardOverlay>
       </Card>
     ))}
