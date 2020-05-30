@@ -49,16 +49,16 @@ export default ({ useActive }) => {
     <CartContainer>
       <CartWrapper>
         {/* {console.log(cart)} */}
-        <CartTitle>My orden 😎</CartTitle>
+        <CartTitle>Mi orden</CartTitle>
         <CartTimer>
           <CartTimerFlex>
             <CartTimerText>{direction}</CartTimerText>
-            <CartTimerButton onClick={handleDirections}>Edit</CartTimerButton>
+            <CartTimerButton onClick={handleDirections}>Editar</CartTimerButton>
           </CartTimerFlex>
           <CartTimerFlex>
             <CartTimerIcon />
             <CartTimerText>{time} min</CartTimerText>
-            <CartTimerButton onClick={handleTime}>Choose time</CartTimerButton>
+            <CartTimerButton onClick={handleTime}>Entregar en</CartTimerButton>
           </CartTimerFlex>
         </CartTimer>
         <CartItemContainer>

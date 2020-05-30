@@ -5,7 +5,7 @@ export default ({ options, handleSelect }: { options: Array<object | any>; handl
   <>
     <Section>
       <div>
-        <RestaurantTitle>Restaurante 🍔</RestaurantTitle>
+        <RestaurantTitle>Restaurante</RestaurantTitle>
       </div>
       <div>
         <select name="select" onChange={handleSelect}>
